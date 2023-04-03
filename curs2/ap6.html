@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Instructiunea switch</title>
+</head>
+
+<body>
+        <script>
+                // Ex 6 Scriptul utilizeaza instructiunea
+                // switch si afiseaza ziua curenta
+
+                var d = new Date ();
+                theDay = d.getDay();
+                switch (theDay) 
+                 {
+                        case 1: document.write("<b>Luni<b/>"); break;
+                        case 2: document.write("<b>Marti<b/>"); 
+                        case 3: document.write("<b>Miercuri<b/>"); break;
+                        case 4: document.write("<b>Joi<b/>"); break;
+                        case 5: document.write("<b>Vineri<b/>"); break;
+                        case 6: document.write("<b>Sambata<b/>"); break;
+                        case 0: document.write("<b>Duminica<b/>"); break;
+                        default: document.write("<b>Saptamana are doar 7 zile</b>");      
+                }
+                // raspunsul la codul de mai sus ne da ziua in care suntem 
+                // eu l-am facut pe 2 aprilie si e duminica 
+
+
+        </script>
+</body>
+
+</html>

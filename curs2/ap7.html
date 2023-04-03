@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Primul for</title>
+</head>
+
+<body>
+        <script>
+                // for (i = 1; i <= 10; i++) {
+                //         document.write(`<p> ${i}</p>`);
+
+                //         console.log(i);
+                // }
+                // codul de mai sus afiseaza de la 1 la 10
+
+                // EXERCITIU  Sa se calculeze suma numerelor pare pana la un n citit de la tastaura.
+                // Pt a realiza acest lucru,utilizam metoda prompt() ce deschide o 
+                // fereastra in care se cere nr n si functia eval() ce evalueaza
+                // valoarea introdusa de catre utilizator. Datele de inceput
+                // si sfarsit sunt afisate in corpul paginii.
+                // e facut in ap9
+
+                var suma = 0;
+                for (i = 1; i <= 10; i++) {
+                        document.write(`<p> ${i}</p>`);
+                        // suma = suma + i;   se poate scrie si in felul asta 
+                        if (i % 2 == 0) {
+                                suma += i; // se poate scrie si in felul asta
+                        }
+
+                }
+
+                console.log(i);
+
+                document.write(`<p> suma este ${suma}</p>`);
+
+        </script>
+</body>
+
+</html>

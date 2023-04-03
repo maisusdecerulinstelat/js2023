@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+</head>
+
+<body>
+
+        <h2>Volumul cilindrului</h2>
+        <div id="rezultat"></div>
+        <script>
+                const PI = 3.14;
+                let inaltime = prompt('Inaltimea cilindrului este?');
+                let raza = prompt('Raza cilindrului este?');
+                // let volume = raza * raza * PI * inaltime ;
+                let volume = raza ** 2 * PI * inaltime;
+                // alert(volume);
+                let rezultat = document.getElementById('rezultat');
+              // rezultat.innerHTML='<p> Rezultatul este ' + volume +  '</p>';
+                rezultat.innerHTML=`<p> Cu raza : ${raza} si inaltimea: ${inaltime} este ${volume } </p>`;
+
+
+
+        </script>
+</body>
+
+</html>

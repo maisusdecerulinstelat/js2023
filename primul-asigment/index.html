@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+</head>
+
+<body>
+
+        <h1>Calculator Volum Cilindru</h1>
+
+
+
+        <label for="raza">Introduceti raza:</label>
+
+        <input type="number" id="raza">
+
+
+
+        <label for="inaltime">Introduceti inaltimea:</label>
+
+        <input type="number" id="inaltime">
+
+
+
+        <button onclick="calculeazaVolum()">Calculeaza Volum</button>
+
+
+
+        <p id="rezultat"></p>
+        <script>function calculeazaVolum() {
+
+                        // Citeste valorile razei si inaltimii introduse de utilizator
+
+                        var raza = document.getElementById("raza").value;
+
+                        var inaltime = document.getElementById("inaltime").value;
+
+
+
+                        // Calculeaza volumul cilindrului utilizand formula data
+
+                        var volum = raza * raza * Math.PI * inaltime;
+
+
+
+                        // Afiseaza rezultatul in cadrul documentului HTML
+
+                        document.getElementById("rezultat").innerHTML = "Volumul cilindrului este: " + volum.toFixed(2);
+
+                }
+
+                // function volum() {
+                //         var raza = document.getElementById("#raza").value;
+                //         var inaltimea = document.getElementById("#inaltimea").value;
+                //         document.getElementById("#display").innerText = Math.PI * Math.pow(raza, 2) * inaltimea;
+                // }
+                // console.log(volum());
+
+                // console.log(inaltimea);
+
+
+
+
+
+
+
+
+        </script>
+</body>
+
+</html>
