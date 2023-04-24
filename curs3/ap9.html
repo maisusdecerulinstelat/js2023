@@ -17,18 +17,27 @@
                         return a * b;
                 }
                 document.write('<table>');
-                for (let i = 1; i <= 10; i++) {
                         document.write('<tr>');
+                for (let i = 1; i <= 10; i++) {
+                        if(i == 6) {
+                                document.write('</tr>');    
+                        }
+                      
+                        document.write('<td>');        
                         document.write(`<h2>inmultirea cu ${i}</h2>`);
+
                         for (let j = 1; j <= 10; j++) {
+
                                 document.write(`${i} * ${j} = `, inmultire(i, j));
                                 document.write('<br>');
-                        }document.write('</tr>');
+
+                        }
+                        
+                        document.write('</td>');
 
                 }
-                document.write('<table>');
-
-
+                document.write('</tr>');
+                document.write('</table>');
         </script>
 </body>
 

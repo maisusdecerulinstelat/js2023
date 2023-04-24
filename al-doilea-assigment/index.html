@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Calculator</title>
+  <style>
+    .error { color: red;}
+  </style>
+</head>
+
+<body>
+  <h1>Calculator</h1>
+  <form>
+    <label for="num1">Primul număr:</label>
+    <input type="number" id="num1" name="num1"><br><br>
+
+    <label for="op">Operația:</label>
+    <select id="op" name="op">
+      <option value="+">+</option>
+      <option value="-">-</option>
+      <option value="*">*</option>
+      <option value="/">/</option>
+    </select><br><br>
+
+    <label for="num2">Al doilea număr:</label>
+    <input type="number" id="num2" name="num2"><br><br>
+
+    <button type="button" onclick="calculate()">Calculează</button>
+  </form>
+
+  <script>
+    function calculate() {
+      // obțineți valorile introduse de utilizator
+      var num1 = +(document.getElementById("num1").value);
+      var op = document.getElementById("op").value;
+      var num2 = +(document.getElementById("num2").value);
+      console.log(typeof num1, typeof num2, isNaN(num1), isNaN(num2), num1,num2);
+      if (isNaN (num1)  && isNaN (num2) ) {
+
+        // efectuați operația corespunzătoare
+        var result;
+        if (op == "+") {
+          result = num1 + num2;
+        } else if (op == "-") {
+          result = num1 - num2;
+        } else if (op == "*") {
+          result = num1 * num2;
+        } else if (op == "/") {
+          if (num2 == 0) {
+            result = 'nu putem face impartirea la a';
+          }
+          else {
+            result = num1 / num2;
+          }
+        }
+      } 
+      else {
+        result = ' <span class= "error"> Ati introdus o valoare care nu este numar </span>';
+      }
+
+
+      // afișați rezultatul într-un document HTML
+      document.getElementById("result").innerHTML = result;
+    }
+  </script>
+
+  <div id="result"></div>
+</body>
+
+</html>
